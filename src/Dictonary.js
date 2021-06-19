@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Results from "./Results";
 import "./Dictonary.css";
 
 export default function Dictonary() {
     let [keyword, setKeyword] = useState("")
+    let [results, setResults] = useState(null)
 
     function handleResponse(response){
     console.log(response.data[0])
+    setResults(response.data)
     }
+
+
 
     function search(event) {
         event.preventDefault();
@@ -27,6 +32,9 @@ export default function Dictonary() {
            <form onSubmit={search}>
                <input type="search" onChange={handleKeywordChange} autoFocus={true} />
            </form>
+           <h1>
+           <Results results={results} />
+           </h1>
         </div>
     )
 }
