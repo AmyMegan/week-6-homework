@@ -11,7 +11,7 @@ export default function App() {
     </div>
     </div>
     <main>
-      <Dictonary />
+      <Dictonary defaultKeyword="Paris" />
     </main>
     <small> 
     <footer className="App-footer"> Coded by Amy Megan.</footer>
