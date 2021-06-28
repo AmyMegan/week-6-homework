@@ -38,8 +38,9 @@ export default function Dictonary(props) {
         return (
             <div className="Dictonary">
                 <section>
+                <h1>What are you looking for? </h1>
                <form onSubmit={handleSubmit}>
-                   <input type="search" onChange={handleKeywordChange} autoFocus={true} />
+                   <input type="search" onChange={handleKeywordChange} defaultValue={props.defaultKeyword} autoFocus={true} />
                </form>
                <div className="hint">
                    suggested words: sunset, wine, yoga, forest, plants...
