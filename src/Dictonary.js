@@ -5,7 +5,6 @@ import Photos from "./Photos";
 
 import "./Dictonary.css";
 
-
 export default function Dictonary(props) {
     let [keyword, setKeyword] = useState(props.defaultKeyword)
     let [results, setResults] = useState(null);
