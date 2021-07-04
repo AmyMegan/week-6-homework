@@ -23,14 +23,14 @@ export default function Dictonary(props) {
     }
 
     function search() {
-        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
-        axios.get(apiUrl).then(handleResponse)
-    }
-
-    let pexelsAPIKey = "563492ad6f917000010000017839b59841ea4625893af164578bf2ef"
-    let pexelsAPIURL = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
-    let headers = {"Authorization" : `Bearer ${pexelsAPIKey}`}
-    axios.get(pexelsAPIURL, { headers: headers }).then(handlePexelsResponse);
+            let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
+            axios.get(apiUrl).then(handleResponse);
+            let pexelsAPIKey =
+              "563492ad6f917000010000017839b59841ea4625893af164578bf2ef";
+            let pexelsAPIURL = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+            let headers = { Authorization: `Bearer ${pexelsAPIKey}` };
+            axios.get(pexelsAPIURL, { headers: headers }).then(handlePexelsResponse);
+          }
 
     function handleSubmit (event) {
         event.preventDefault();
